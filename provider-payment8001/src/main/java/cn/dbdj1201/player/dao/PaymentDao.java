@@ -4,8 +4,6 @@ import cn.dbdj1201.player.entity.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
-
 /**
  * @author tyz1201
  * @datetime 2020-05-15 21:21

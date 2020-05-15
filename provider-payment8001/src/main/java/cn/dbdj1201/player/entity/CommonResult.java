@@ -17,7 +17,6 @@ public class CommonResult<T> {
     private T data;         //实体数据
 
     public CommonResult(Integer code, String message) {
-        this.code = code;
-        this.message = message;
+        this(code, message, null);
     }
 }
