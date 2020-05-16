@@ -1,6 +1,6 @@
-package cn.dbdj1201.player.service;
+package cn.dbdj1201.player.payment.service;
 
-import cn.dbdj1201.player.entity.Payment;
+import cn.dbdj1201.player.common.entities.Payment;
 import org.apache.ibatis.annotations.Param;
 
 /**

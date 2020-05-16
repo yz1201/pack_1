@@ -1,0 +1,9 @@
+server:
+  port: 9231
+spring:
+  application:
+    name: service-order
+  devtools:
+    restart:
+      poll-interval: 3000ms
+      quiet-period: 2999ms

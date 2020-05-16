@@ -1,8 +1,8 @@
-package cn.dbdj1201.player.service.impl;
+package cn.dbdj1201.player.payment.service.impl;
 
-import cn.dbdj1201.player.dao.PaymentDao;
-import cn.dbdj1201.player.entity.Payment;
-import cn.dbdj1201.player.service.PaymentService;
+import cn.dbdj1201.player.common.entities.Payment;
+import cn.dbdj1201.player.payment.dao.PaymentDao;
+import cn.dbdj1201.player.payment.service.PaymentService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

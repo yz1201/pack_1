@@ -1,4 +1,4 @@
-package cn.dbdj1201.player.entity;
+package cn.dbdj1201.player.common.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  * @author tyz1201
- * @datetime 2020-05-15 21:14
+ * @datetime 2020-05-16 23:06
  **/
 @Data
 @AllArgsConstructor

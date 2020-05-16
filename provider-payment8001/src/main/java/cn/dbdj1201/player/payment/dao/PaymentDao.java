@@ -1,6 +1,6 @@
-package cn.dbdj1201.player.dao;
+package cn.dbdj1201.player.payment.dao;
 
-import cn.dbdj1201.player.entity.Payment;
+import cn.dbdj1201.player.common.entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

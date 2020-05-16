@@ -1,8 +1,8 @@
-package cn.dbdj1201.player.controller;
+package cn.dbdj1201.player.payment.controller;
 
-import cn.dbdj1201.player.entity.CommonResult;
-import cn.dbdj1201.player.entity.Payment;
-import cn.dbdj1201.player.service.PaymentService;
+import cn.dbdj1201.player.common.entities.CommonResult;
+import cn.dbdj1201.player.common.entities.Payment;
+import cn.dbdj1201.player.payment.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,16 +14,15 @@ import javax.annotation.Resource;
  **/
 @RestController
 @Slf4j
-@RequestMapping(value = "/payment")
 public class PaymentController {
 
     @Resource
     private PaymentService paymentService;
 
-    @PostMapping(value = "create")
-    public CommonResult<Payment> createPayment(Payment payment) {
+    @PostMapping(value = "/payment/create")
+    public CommonResult<Payment> createPayment(@RequestBody Payment payment) {
         int result = paymentService.create(payment);
-        log.info("*****插入结果： " + result);
+        log.info("*****插入结果： " + result + "? haha");
         CommonResult<Payment> commonResult;
         if (result > 0) {
             commonResult = new CommonResult(200, "插入成功", result);
@@ -34,7 +33,7 @@ public class PaymentController {
         return commonResult;
     }
 
-    @GetMapping(value = "get/{id}")
+    @GetMapping(value = "/payment/get/{id}")
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id) {
         CommonResult<Payment> result;
         Payment payment = this.paymentService.getPaymentById(id);
