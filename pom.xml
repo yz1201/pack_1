@@ -14,6 +14,8 @@
         <module>server-eureka9230</module>
         <module>server-eureka9229</module>
         <module>provider-payment9232</module>
+        <module>provider-payment9233</module>
+        <module>provider-payment9238</module>
     </modules>
     <packaging>pom</packaging>
     <!--统一管理jar包版本-->
