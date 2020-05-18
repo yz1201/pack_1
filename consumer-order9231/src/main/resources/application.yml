@@ -1,5 +1,5 @@
 server:
-  port: 9231
+  port: 9241
 spring:
   application:
     name: service-order
@@ -7,3 +7,11 @@ spring:
     restart:
       poll-interval: 3000ms
       quiet-period: 2999ms
+eureka:
+  client:
+    registry-fetch-interval-seconds: 10
+    service-url:
+      defaultZone: http://eureka9230.com:9230/eureka,http://eureka9229.com:9229/eureka #集群
+  instance:
+    lease-renewal-interval-in-seconds: 5 # 每隔5秒发送一次心跳
+    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期

@@ -11,6 +11,9 @@
         <module>provider-payment8001</module>
         <module>consumer-order9231</module>
         <module>api-commons</module>
+        <module>server-eureka9230</module>
+        <module>server-eureka9229</module>
+        <module>provider-payment9232</module>
     </modules>
     <packaging>pom</packaging>
     <!--统一管理jar包版本-->
