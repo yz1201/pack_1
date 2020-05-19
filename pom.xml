@@ -16,6 +16,9 @@
         <module>provider-payment9232</module>
         <module>provider-payment9233</module>
         <module>provider-payment9238</module>
+        <module>consumer-order9242</module>
+        <module>consumer-order9243</module>
+        <module>provider-payment9237</module>
     </modules>
     <packaging>pom</packaging>
     <!--统一管理jar包版本-->
