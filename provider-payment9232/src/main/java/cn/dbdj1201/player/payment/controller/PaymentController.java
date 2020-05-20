@@ -47,4 +47,9 @@ public class PaymentController {
             result = new CommonResult<>(404, "查无此订单", null);
         return result;
     }
+
+    @GetMapping("/payment/lb")
+    public String getPaymentLB() {
+        return serverPort;
+    }
 }

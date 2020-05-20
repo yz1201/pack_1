@@ -8,5 +8,5 @@ spring:
     consul:
       discovery:
         service-name: ${spring.application.name}
-      host: locahost
+      host: localhost
       port: 8500
