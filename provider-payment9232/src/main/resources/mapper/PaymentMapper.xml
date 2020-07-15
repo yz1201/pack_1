@@ -3,7 +3,7 @@
 
 <mapper namespace="cn.dbdj1201.player.payment.dao.PaymentDao">
     <insert id="create" parameterType="cn.dbdj1201.player.common.entities.Payment" useGeneratedKeys="true" keyProperty="id">
-        insert into payment(serial) values(#{serial});
+        insert into tb_order(serial) values(#{serial});
     </insert>
 
     <resultMap id="BaseResultMap" type="cn.dbdj1201.player.common.entities.Payment">
@@ -11,6 +11,6 @@
         <id column="serial" property="serial" jdbcType="VARCHAR"/>
     </resultMap>
     <select id="getPaymentById" parameterType="Long" resultMap="BaseResultMap">
-        select * from payment where id = #{id};
+        select * from tb_order where id = #{id};
     </select>
 </mapper>

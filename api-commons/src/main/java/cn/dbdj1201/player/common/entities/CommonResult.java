@@ -11,14 +11,24 @@ import java.io.Serializable;
  * @datetime 2020-05-16 23:05
  **/
 @Data
-@AllArgsConstructor
+//@AllArgsConstructor
 @NoArgsConstructor
 public class CommonResult<T> implements Serializable {
-    private Integer code;   //http状态码
-    private String message; //返回信息
-    private T data;         //实体数据
+    //http状态码
+    private Integer code;
+    //返回信息
+    private String message;
+    //实体数据
+    private T data;
 
     public CommonResult(Integer code, String message) {
-        this(code, message, null);
+        this.code = code;
+        this.message = message;
+    }
+
+    public CommonResult(Integer code, String message, T data) {
+        this.code = code;
+        this.message = message;
+        this.data = data;
     }
 }

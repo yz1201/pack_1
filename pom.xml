@@ -7,6 +7,7 @@
     <groupId>cn.dbdj1201</groupId>
     <artifactId>player</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
         <module>provider-payment8001</module>
         <module>consumer-order9231</module>
@@ -14,12 +15,14 @@
         <module>server-eureka9230</module>
         <module>server-eureka9229</module>
         <module>provider-payment9232</module>
-        <module>provider-payment9233</module>
+        <!--        <module>provider-payment9233</module>-->
         <module>provider-payment9238</module>
         <module>consumer-order9242</module>
         <module>consumer-order9243</module>
         <module>provider-payment9237</module>
+        <module>consumer-feign-order9244</module>
     </modules>
+
     <packaging>pom</packaging>
     <!--统一管理jar包版本-->
     <properties>
@@ -99,6 +102,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>2.2.2.RELEASE</version>
             </dependency>
 
         </dependencies>

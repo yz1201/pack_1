@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Component
 public class MyLB implements LoadBalancer {
 
-    private AtomicInteger atomicInteger = new AtomicInteger(0);
+    private final AtomicInteger atomicInteger = new AtomicInteger(0);
 
     public final int getAndIncrement() {
         int current;
@@ -31,5 +31,12 @@ public class MyLB implements LoadBalancer {
     public ServiceInstance instances(List<ServiceInstance> serviceInstances) {
         int index = getAndIncrement() % serviceInstances.size();
         return serviceInstances.get(index);
+    }
+
+    public static void main(String[] args) {
+        int size = 5;
+        int num = 13;
+        System.out.println(num & (size - 1));
+        System.out.println(num % size);
     }
 }

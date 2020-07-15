@@ -2,6 +2,7 @@ package cn.dbdj1201.player.myrule;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
+import com.netflix.loadbalancer.WeightedResponseTimeRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,5 +16,7 @@ public class MyselfRule {
     @Bean
     public IRule myRule() {
         return new RandomRule();//随机返回机制
+//        return new WeightedResponseTimeRule();
+
     }
 }
