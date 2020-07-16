@@ -10,8 +10,8 @@ eureka:
     fetch-registry: false
     #设置与eureka server交互的地址查询服务和注册服务都需要依赖下边地址
     service-url:
-      defaultZone: http://eureka9229.com:9229/eureka
-#      defaultZone: http://${eureka.instance.hostname}:9230
+      #      defaultZone: http://eureka9229.com:9229/eureka
+      defaultZone: http://${eureka.instance.hostname}:9230
 spring:
   application:
     name: player-registry9230

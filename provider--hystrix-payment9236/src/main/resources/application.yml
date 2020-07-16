@@ -1,0 +1,22 @@
+server:
+  port: 9236
+
+spring:
+  application:
+    name: service-payment
+  devtools:
+    restart:
+      poll-interval: 3000ms
+      quiet-period: 2999ms
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka9230.com:9230/eureka
+    registry-fetch-interval-seconds: 10
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
+    instance-id: payment9236
+    prefer-ip-address: true

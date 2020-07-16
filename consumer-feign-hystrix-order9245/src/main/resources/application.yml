@@ -1,0 +1,32 @@
+server:
+  port: 9245
+
+spring:
+  application:
+    name: service-order
+  devtools:
+    restart:
+      poll-interval: 3000ms
+      quiet-period: 2999ms
+eureka:
+  client:
+    registry-fetch-interval-seconds: 10
+    service-url:
+#      defaultZone: http://eureka9230.com:9230/eureka,http://eureka9229.com:9229/eureka #集群
+      defaultZone: http://eureka9230.com:9230/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5 # 每隔5秒发送一次心跳
+    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+    instance-id: order9245
+    prefer-ip-address: true
+logging:
+  level:
+    cn.dbdj1201.player.service.IPaymentService: debug
+feign:
+#  httpclient:
+#    connection-timeout: 10000
+  hystrix:
+    enabled: true
+ribbon:
+  ReadTimeout: 6000
+  ConnectTimeout: 6000
