@@ -1,0 +1,12 @@
+server:
+  port: 9237
+spring:
+  application:
+    name: consul-provider-payment
+#consul注册中心地址
+  cloud:
+    consul:
+      discovery:
+        service-name: ${spring.application.name}
+      host: localhost
+      port: 8500

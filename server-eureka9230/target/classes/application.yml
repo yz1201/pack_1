@@ -1,0 +1,17 @@
+server:
+  port: 9230
+eureka:
+  instance:
+    hostname: eureka9030.com #eureka服务端的实例名称
+  client:
+    #false表示不向注册中心注册自己
+    register-with-eureka: false
+    #表示自身就是注册中心，职责就是维护服务实例，并不需要去检索服务
+    fetch-registry: false
+    #设置与eureka server交互的地址查询服务和注册服务都需要依赖下边地址
+    service-url:
+      #      defaultZone: http://eureka9229.com:9229/eureka
+      defaultZone: http://${eureka.instance.hostname}:9230
+spring:
+  application:
+    name: player-registry9230
