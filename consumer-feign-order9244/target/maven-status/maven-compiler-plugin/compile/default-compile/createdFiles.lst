@@ -1,3 +1,4 @@
 cn\dbdj1201\player\controller\OrderFeignController.class
 cn\dbdj1201\player\OrderFeignMain9244.class
 cn\dbdj1201\player\service\PaymentFeignService.class
+cn\dbdj1201\player\config\FeignConfig.class

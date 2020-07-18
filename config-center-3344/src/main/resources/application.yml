@@ -1,0 +1,22 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: config-center
+  cloud:
+    config:
+      server:
+        git:
+          #项目
+          uri: https://github.com/yz1201/pack1_config.git
+          #搜索目录
+          search-paths:
+            - pack1-config
+      #分支
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9230/eureka
+    register-with-eureka: true
+    fetch-registry: true
