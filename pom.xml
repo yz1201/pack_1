@@ -27,6 +27,11 @@
         <module>gateway-gateway9527</module>
         <module>config-center-3344</module>
         <module>config-client-3355</module>
+        <module>config-client-3366</module>
+        <module>cloud-stream-rabbitmq-provider40923</module>
+        <module>cloud-stream-rabbitmq-consumer91021</module>
+        <module>cloud-stream-rabbitmq-consumer41022</module>
+        <module>cloudalibaba-provider-payment40924</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -126,6 +131,13 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-config-server</artifactId>
+                <version>${spring.cloud.newVersion}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-bus-amqp</artifactId>
                 <version>${spring.cloud.newVersion}</version>
             </dependency>
 

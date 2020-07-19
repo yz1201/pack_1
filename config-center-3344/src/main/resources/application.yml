@@ -14,9 +14,22 @@ spring:
             - pack1-config
       #分支
       label: master
+  #rabbitmq相关配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:9230/eureka
     register-with-eureka: true
     fetch-registry: true
+
+#rabbitmq相关配置，暴露bus，刷新配置的端点。
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
