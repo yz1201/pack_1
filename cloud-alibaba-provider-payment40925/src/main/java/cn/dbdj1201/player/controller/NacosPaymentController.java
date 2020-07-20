@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author yz1201
- * @date 2020-07-19 19:32
+ * @date 2020-07-20 10:27
  **/
 @RestController
 @Slf4j
-public class PaymentController {
+public class NacosPaymentController {
 
     @Value("${server.port}")
     private String serverPort;
 
     @GetMapping("/nacos/payment/get/{id}")
     public String getPayment(@PathVariable Long id) {
-        return "nacos registry, serverPort: " + serverPort + "\t id: " + id;
+        return "welcome to nacos, id: " + id + ", from serverPort: " + serverPort;
     }
 }

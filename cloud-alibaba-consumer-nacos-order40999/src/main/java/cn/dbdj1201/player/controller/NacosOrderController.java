@@ -5,20 +5,26 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import javax.annotation.Resource;
 
 /**
  * @author yz1201
- * @date 2020-07-19 19:32
+ * @date 2020-07-20 10:48
  **/
 @RestController
 @Slf4j
-public class PaymentController {
+public class NacosOrderController {
 
-    @Value("${server.port}")
-    private String serverPort;
+    @Resource
+    private RestTemplate restTemplate;
 
-    @GetMapping("/nacos/payment/get/{id}")
+    @Value("${service-url.nacos-user-service}")
+    private String serverUrl;
+
+    @GetMapping("/nacos/consumer/payment/get/{id}")
     public String getPayment(@PathVariable Long id) {
-        return "nacos registry, serverPort: " + serverPort + "\t id: " + id;
+        return restTemplate.getForObject(serverUrl+"/nacos/payment/get/"+id, String.class);
     }
 }
