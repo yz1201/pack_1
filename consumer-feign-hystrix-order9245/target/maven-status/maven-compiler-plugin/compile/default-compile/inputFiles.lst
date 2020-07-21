@@ -1,0 +1,4 @@
+F:\code_repo\pack_1\consumer-feign-hystrix-order9245\src\main\java\cn\dbdj1201\player\controller\OrderHystrixController.java
+F:\code_repo\pack_1\consumer-feign-hystrix-order9245\src\main\java\cn\dbdj1201\player\service\IPaymentService.java
+F:\code_repo\pack_1\consumer-feign-hystrix-order9245\src\main\java\cn\dbdj1201\player\service\PaymentFallbackService.java
+F:\code_repo\pack_1\consumer-feign-hystrix-order9245\src\main\java\cn\dbdj1201\player\OrderHystrixMain9245.java

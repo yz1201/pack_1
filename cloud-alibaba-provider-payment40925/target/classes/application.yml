@@ -1,0 +1,16 @@
+server:
+  port: 40925
+spring:
+  application:
+    name: nacos-payment-provider
+#服务注册
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://localhost:8848
+#服务暴露
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
