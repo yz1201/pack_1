@@ -36,6 +36,11 @@
         <module>cloud-alibaba-consumer-nacos-order40999</module>
         <module>cloud-alibaba-config-nacos-client3377</module>
         <module>cloud-alibaba-sentinel-service90512</module>
+        <module>cloud-alibaba-provider-payment40926</module>
+        <module>cloud-alibaba-provider-payment40927</module>
+        <module>seata-order-service40900</module>
+        <module>seata-storage-service40901</module>
+        <module>seata-account-service40902</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -47,10 +52,11 @@
         <junit.version>4.12</junit.version>
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.18.12</lombok.version>
-        <mysql.version>8.0.19</mysql.version>
+        <mysql.version>8.0.20</mysql.version>
         <druid.version>1.1.22</druid.version>
         <mybatis.spring.boot.version>2.1.2</mybatis.spring.boot.version>
         <spring.cloud.newVersion>2.2.2.RELEASE</spring.cloud.newVersion>
+        <mapper.starter.version>2.1.5</mapper.starter.version>
     </properties>
 
     <!--子模块继承之后，提供作用：锁定版本+子模块不用写groupId和version-->
@@ -107,6 +113,13 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.spring.boot.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${mapper.starter.version}</version>
+            </dependency>
+
             <!--日志-->
             <dependency>
                 <groupId>log4j</groupId>
@@ -138,13 +151,17 @@
                 <version>${spring.cloud.newVersion}</version>
             </dependency>
 
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-bus-amqp</artifactId>
                 <version>${spring.cloud.newVersion}</version>
             </dependency>
 
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.3.8</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

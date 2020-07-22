@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.dbdj1201.player.seata.dao">
+    <resultMap id="BaseResultMap" type="cn.dbdj1201.player.seata.domain.Storage">
+        <result column="id" property="id" javaType="BIGINT"/>
+        <result column="product_id" property="productId" javaType="BIGINT"/>
+        <result column="total" property="total" javaType="INTEGER"/>
+        <result column="used" property="used" javaType="INTEGER"/>
+        <result column="residue" property="residue" javaType="INTEGER"/>
+    </resultMap>
+
+    <update id="decrease">
+        update t_storage set used = used + #{count}, residue = residue - #{count}
+        where product_id = #{productId};
+    </update>
+</mapper>

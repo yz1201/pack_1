@@ -1,0 +1,41 @@
+server:
+  port: 40900
+spring:
+  application:
+    name: seata-order-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/seata_order?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+seata:
+  application-id: ${spring.application.name}
+  tx-service-group: default
+  service:
+    vgroupMapping:
+      default: default
+    grouplist:
+      default: 127.0.0.1:8091
+# 修改ribbon默认时间
+ribbon:
+  ReadTimeout: 6000
+  ConnectTimout: 6000
+feign:
+  hystrix:
+    enabled: false
+#logging:
+#  level: debug
+#    io:
+#      seata: info
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
